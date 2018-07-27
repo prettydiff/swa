@@ -5,6 +5,10 @@
             https: require("https"),
             path: require("path")
         },
+        ports:any = {
+            insecure: 8888,
+            secure: 9999
+        },
         sep:string = node.path.sep,
         projectPath:string = (function node_project() {
             const dirs:string[] = __dirname.split(sep);
@@ -73,9 +77,9 @@
             process.exit(1);
         };
     insecure.on("error", serverError);
-    insecure.listen(8000);
+    insecure.listen(ports.insecure);
     secure.on("error", serverError);
-    secure.listen(4430);
-    console.log("http server is up.");
-    console.log("https server is up.");
+    secure.listen(ports.secure);
+    console.log(`http server is up on port ${ports.insecure}.`);
+    console.log(`https server is up on port ${ports.secure}.`);
 }());
