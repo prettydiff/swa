@@ -1,0 +1,18 @@
+{
+    "author": "Austin Cheney",
+    "bugs": {
+        "url": "https://github.com/prettydiff/swa/issues"
+    },
+    "dependencies": {
+        "@types/node": "^10.x.x"
+    },
+    "description": "A demo site for an experimental security proposal.",
+    "homepage": "https://prettydiff.com",
+    "license": "CC0-1.0",
+    "name": "swa",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/prettydiff/swa.git"
+    },
+    "version": "3.0.0"
+}
